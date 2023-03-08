@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+body{
+background-color: green;
+
+}
+
+
+
+</style>
+
+
+<script>
+    class pankki{
+        constructor(tilinumero,saldo,historia){
+            this.tilinumero = tilinumero
+            this.saldo = saldo
+            this.historia = historia
+
+}
+
+    aika(){
+        alert("aika on " + new Date())
+
+}
+    sisään(){
+    var e = Number(document.getElementById("i").value)       
+    this.saldo = this.saldo + e
+    console.log(this.saldo)
+}
+ulos(){
+    var a = Number(document.getElementById("u").value)  
+    if(this.saldo < a){
+    alert("sinulla ei ole tililläsi tarpeeksi saldoa")
+
+    }
+     else{
+    this.saldo = this.saldo - a
+     }
+}
+tiedot(){
+    alert("tilinumerosi on " + 
+    this.tilinumero +
+    ". sinulla on jäljellä tililläsi rahaa " +
+     pankkini.saldo + 
+     " euroa.");
+
+}
+} 
+        var pankkini = new pankki ("FI49 5000 9420 0287 30", 0 ,[])
+</script>
+
+
+</head>
+
+
+<body>
+        <button onclick="pankkini.aika()">aika</button>
+    <br>
+    <br>
+        <button onclick="pankkini.sisään()">sisään</button>
+        <input type="number" id="i">
+    <br>
+    <br>
+        <button onclick="pankkini.ulos()">ulos</button>
+        <input type="number" id="u">
+    <br>
+    <br>
+        <button onclick="pankkini.tiedot()">tiedot</button>
+        
+       
+</body>
+
+
+</html>
